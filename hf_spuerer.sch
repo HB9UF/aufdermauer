@@ -422,4 +422,16 @@ Wire Notes Line
 	5800 3600 5800 3200
 Text Notes 5850 3850 0    50   ~ 0
 (c) 2019 CC BY-SA 4.0
+$Comp
+L Connector:Conn_01x01_Female J4
+U 1 1 5D3654C2
+P 1200 3900
+F 0 "J4" H 1092 3767 50  0000 C CNN
+F 1 "GND" H 1092 3766 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 1200 3900 50  0001 C CNN
+F 3 "~" H 1200 3900 50  0001 C CNN
+	1    1200 3900
+	-1   0    0    1   
+$EndComp
+Connection ~ 1400 3900
 $EndSCHEMATC
