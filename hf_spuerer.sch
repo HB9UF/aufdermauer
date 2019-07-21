@@ -234,7 +234,7 @@ Connection ~ 3150 3000
 Wire Wire Line
 	3150 3000 2700 3000
 Text Notes 3200 4650 0    50   ~ 0
-Todo:\n- Evaluate need for polyfuse\n- 3 mm LED footprint\n- Put artwork on back side\n- Improve mounting and LED hole positioning\n- 1210 instead of 1206 for inductors
+Todo:\n- Evaluate need for polyfuse\n- 3 mm LED footprint\n- Put artwork on back side\n- 1210 instead of 1206 for inductors
 $Comp
 L Mechanical:MountingHole_Pad H1
 U 1 1 5D2DB476
