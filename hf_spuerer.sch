@@ -234,7 +234,7 @@ Connection ~ 3150 3000
 Wire Wire Line
 	3150 3000 2700 3000
 Text Notes 3200 4650 0    50   ~ 0
-Todo:\n- Evaluate need for polyfuse\n- 3 mm LED footprint\n- Put artwork on back side\n- 1210 instead of 1206 for inductors
+Todo:\n- Evaluate need for polyfuse\n- Put artwork on back side\n- 1210 instead of 1206 for inductors
 $Comp
 L Mechanical:MountingHole_Pad H1
 U 1 1 5D2DB476
@@ -366,7 +366,7 @@ U 1 1 5D2C69F8
 P 2750 2700
 F 0 "D2" H 2750 2800 50  0000 C CNN
 F 1 "RED" H 2750 2600 50  0000 C CNN
-F 2 "LED_THT:LED_D5.0mm" H 2743 2825 50  0001 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 2743 2825 50  0001 C CNN
 F 3 "~" H 2750 2700 50  0001 C CNN
 	1    2750 2700
 	1    0    0    -1  
