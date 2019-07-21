@@ -115,7 +115,7 @@ U 1 1 5D28AFB3
 P 2200 3450
 F 0 "L1" H 2253 3496 50  0000 L CNN
 F 1 "1 uH" H 2253 3405 50  0000 L CNN
-F 2 "Inductor_SMD:L_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 2200 3450 50  0001 C CNN
+F 2 "Inductor_SMD:L_1210_3225Metric_Pad1.42x2.65mm_HandSolder" H 2200 3450 50  0001 C CNN
 F 3 "~" H 2200 3450 50  0001 C CNN
 	1    2200 3450
 	1    0    0    -1  
@@ -126,7 +126,7 @@ U 1 1 5D28B4A2
 P 2200 3750
 F 0 "L3" H 2288 3796 50  0000 L CNN
 F 1 "470R" H 2288 3705 50  0000 L CNN
-F 2 "Inductor_SMD:L_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 2200 3750 50  0001 C CNN
+F 2 "Inductor_SMD:L_1210_3225Metric_Pad1.42x2.65mm_HandSolder" H 2200 3750 50  0001 C CNN
 F 3 "~" H 2200 3750 50  0001 C CNN
 	1    2200 3750
 	1    0    0    -1  
@@ -139,7 +139,7 @@ U 1 1 5D2968BB
 P 2700 3750
 F 0 "L4" H 2788 3796 50  0000 L CNN
 F 1 "NP" H 2788 3705 50  0000 L CNN
-F 2 "Inductor_SMD:L_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 2700 3750 50  0001 C CNN
+F 2 "Inductor_SMD:L_1210_3225Metric_Pad1.42x2.65mm_HandSolder" H 2700 3750 50  0001 C CNN
 F 3 "~" H 2700 3750 50  0001 C CNN
 	1    2700 3750
 	1    0    0    -1  
@@ -234,7 +234,7 @@ Connection ~ 3150 3000
 Wire Wire Line
 	3150 3000 2700 3000
 Text Notes 3200 4650 0    50   ~ 0
-Todo:\n- Evaluate need for polyfuse\n- Put artwork on back side\n- 1210 instead of 1206 for inductors
+Todo:\n- Evaluate need for polyfuse\n- Put artwork on back side
 $Comp
 L Mechanical:MountingHole_Pad H1
 U 1 1 5D2DB476
@@ -329,7 +329,7 @@ U 1 1 5D28E35B
 P 1850 3600
 F 0 "L2" H 1938 3646 50  0000 L CNN
 F 1 "NP" H 1938 3555 50  0000 L CNN
-F 2 "Inductor_SMD:L_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 1850 3600 50  0001 C CNN
+F 2 "Inductor_SMD:L_1210_3225Metric_Pad1.42x2.65mm_HandSolder" H 1850 3600 50  0001 C CNN
 F 3 "~" H 1850 3600 50  0001 C CNN
 	1    1850 3600
 	1    0    0    -1  
