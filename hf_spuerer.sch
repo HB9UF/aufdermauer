@@ -328,7 +328,7 @@ Connection ~ 1850 3300
 Wire Wire Line
 	1850 3300 2200 3300
 Text Notes 1250 1200 0    197  ~ 39
-HB9UF Hochfrequenz-Spürer rev. 1.0
+HB9UF Hochfrequenz-Spürer rev. 1.1
 Text Notes 5850 3000 0    50   ~ 0
 Für Zeigerinstrument (Meter) statt LED:\nQ2, R2 und D2 nicht bestücken.\nSpannungsabfall über R1 messen (J2)\noder stromgesteuertes\nZeigerinstrument an J2 anschliessen\nund R1 nicht bestücken.
 Wire Notes Line
