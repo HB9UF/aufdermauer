@@ -15,17 +15,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Connector:Conn_01x02_Male J1
-U 1 1 5D2837C9
-P 5900 2100
-F 0 "J1" H 5872 1982 50  0000 R CNN
-F 1 "9 V" H 5872 2073 50  0000 R CNN
-F 2 "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical" H 5900 2100 50  0001 C CNN
-F 3 "~" H 5900 2100 50  0001 C CNN
-	1    5900 2100
-	-1   0    0    1   
-$EndComp
-$Comp
 L Device:Q_NJFET_SDG Q1
 U 1 1 5D284495
 P 3950 3000
@@ -47,8 +36,6 @@ F 3 "~" H 4050 2250 50  0001 C CNN
 	1    4050 2250
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5700 2000 4900 2000
 Wire Wire Line
 	4050 2000 4050 2100
 Wire Wire Line
@@ -159,8 +146,6 @@ Connection ~ 3550 3900
 Connection ~ 4900 3900
 Wire Wire Line
 	5700 3900 4900 3900
-Wire Wire Line
-	5700 2100 5700 3900
 Wire Wire Line
 	4050 2000 3500 2000
 Wire Wire Line
@@ -344,16 +329,16 @@ Wire Wire Line
 	1850 3300 2200 3300
 Text Notes 1250 1200 0    197  ~ 39
 HB9UF Hochfrequenz-Spürer rev. 1.0
-Text Notes 5850 2800 0    50   ~ 0
+Text Notes 5850 3000 0    50   ~ 0
 Für Zeigerinstrument (Meter) statt LED:\nQ2, R2 und D2 nicht bestücken.\nSpannungsabfall über R1 messen (J2)\noder stromgesteuertes\nZeigerinstrument an J2 anschliessen\nund R1 nicht bestücken.
 Wire Notes Line
-	5800 2250 7400 2250
+	5800 2450 7400 2450
 Wire Notes Line
-	7400 2250 7400 2850
+	7400 2450 7400 3050
 Wire Notes Line
-	7400 2850 5800 2850
+	7400 3050 5800 3050
 Wire Notes Line
-	5800 2850 5800 2250
+	5800 3050 5800 2450
 Wire Wire Line
 	2600 2700 2400 2700
 Wire Wire Line
@@ -434,4 +419,37 @@ F 3 "~" H 1200 3900 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Connection ~ 1400 3900
+Wire Wire Line
+	5700 2300 5700 3900
+Wire Wire Line
+	5700 2000 4900 2000
+Wire Wire Line
+	5700 2200 5700 2100
+$Comp
+L Connector:Conn_01x04_Male J1
+U 1 1 5D2837C9
+P 5900 2200
+F 0 "J1" H 5950 1900 50  0000 R CNN
+F 1 "9 V" H 5850 2100 50  0001 R CNN
+F 2 "Connector_JST:JST_XH_B4B-XH-A_1x04_P2.50mm_Vertical" H 5900 2200 50  0001 C CNN
+F 3 "~" H 5900 2200 50  0001 C CNN
+	1    5900 2200
+	-1   0    0    1   
+$EndComp
+Wire Notes Line style solid
+	5950 2200 6000 2200
+Wire Notes Line style solid
+	6000 2200 6000 2300
+Wire Notes Line style solid
+	6000 2300 5950 2300
+Text Notes 6050 2300 0    50   ~ 0
+9 V
+Wire Notes Line style solid
+	5950 2000 6000 2000
+Wire Notes Line style solid
+	6000 2000 6000 2100
+Wire Notes Line style solid
+	6000 2100 5950 2100
+Text Notes 6050 2100 0    50   ~ 0
+Jumper / Switch
 $EndSCHEMATC
