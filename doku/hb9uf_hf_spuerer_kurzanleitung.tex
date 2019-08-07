@@ -4,6 +4,7 @@
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage[pdfauthor={Mathias Weyland, HB9FRV},pdftitle={},pdfstartview=FitH,pdfborder={0 0 0}]{hyperref}
+\usepackage{booktabs}
 \setkomafont{pagehead}{\normalfont\normalcolor}
 %\addtolength{\textheight}{5mm}
 \title{HB9UF Hochfrequenz-Spürer}
@@ -25,9 +26,10 @@
 \vspace{-1.5cm}
 
 \section{Einführung}
-Im Folgenden ist der Aufbau des HB9UF HF-Spürer kurz beschrieben. Es handelt
-sich dabei um ein Bauprojekt, das anlässlich des Hamfestes 2019 in Zug
-vorgestellt worden ist. Ziel war es, interessierten Besuchern am Stand von
+Im Folgenden ist der Aufbau des HB9UF HF-Spürer kurz beschrieben -- ein
+Gerät, welches hochfrequente Felder von Sendern oder Störungen anzeigt.
+Es handelt sich dabei um ein Bauprojekt, das anlässlich des Hamfestes 2019 in
+Zug vorgestellt worden ist. Ziel war es, interessierten Besuchern am Stand von
 HB9UF aufzuzeigen, wie Bauprojekte mit modernen Methoden umgesetzt werden
 können. Hierzu gehört neben dem Entwurf der Schaltung und dem Platinen-Layout
 am PC auch das Bestellen der Bauteile, der Platine und nicht zuletzt das
@@ -71,12 +73,27 @@ Seite verfügbar.
 
 \section{Aufbau}
 Der Aufbau erfolgt gemäss Abbildung \ref{fig:schematic}. Als Antenne dient ein
-Draht von 30 -- 100~cm Länge, welcher an J3 gelötet wird (Pin im Zentrum
-verwenden, es kann zum Experimentieren auch eine SMA-Buchse eingelötet werden).
+Draht von 30 -- 100~cm Länge, welcher an J3 gelötet wird (Beschriftung ``ANT''
+auf Platinenrückseite; Pin im Zentrum verwenden, es kann zum Experimentieren
+auch eine SMA-Buchse eingelötet werden).
 % FIXME: Abbildung
-Ein ebensolanges Gegengewicht ist notwendig, welches mit der Masse (z.B. JFIXME)
-verbunden wird. Die Schaltung benötigt eine Spannung von 9~V und wird über J1 
-(JST XH) z.B. von einer 9~V Blockbatterie gespiesen. Beim Einsatz eines
+Ein ebensolanges Gegengewicht ist notwendig, welches mit der Masse
+verbunden wird (Loch mit Massensymbol verwendet). Die Schaltung benötigt eine Spannung von
+9~V und wird über Pins 1 und 2 von J1, z.B. von einer 9~V Blockbatterie
+gespiesen. Pins 3 und 4 dienen dem Ein- und Ausschalten; an sie kann ein Schalter
+angeschlossen werden, oder aber die beiden Pins werden mit einem Jumper einfach
+kurzgeschlossen. Die 3~mm LED kann, je nach Einsatz, auf der Vorder- oder der
+Rückseite eingesetzt werden.  Abbildung \ref{fig:aufbau} zeigt eine fertig
+bestückte Platine.
+
+\begin{figure}[H]
+\includegraphics[width=\textwidth,height=4cm,draft]{foto.jpg}
+% FIXME: todo
+\caption{Fertig bestückte Platine}
+\label{fig:aufbau}
+\end{figure}
+
+Beim Einsatz eines
 Netzteiles ist zu berücksichtigen, dass das Spiesekabel ebenfalls als Antenne
 wirkt. Ausserdem darf ein solches Netzteil selbst keine Hochfrequenz produzieren,
 da der HF-Spürer diese unweigerlich anzeigen würde. In Abwesenheit von
@@ -84,12 +101,52 @@ hochfrequenten Feldern wird schliesslich P1 aus der Nullstellung heraus (10
 Umdrehungen im Gegenuhrzeigersinn) im Uhrzeigersinn soweit erhöht, biss die LED
 ganz schwach zu leuchten beginnt. Die Schaltung bezieht im Leerlauf ca. 2~mA.
 
+\section{Stückliste}
 
-% FIXME: Delux:
-% SMA-Antennenbuchse
-% Schalter
-% Gehäuse
-% Diode
+\begin{center}\begin{tabular}{lllll}\toprule
+    \textbf{Referenz} & \textbf{Bauteilwert} & \textbf{Gehäuse} & \textbf{Beschriftung} & \textbf{Bemerkung}\\\midrule
+R1 & 10~k$\Omega$ & SMD 1206 & 103 & \\
+R2 & 470~$\Omega$ & SMD 1206 & 471 & \\
+R3 & 1~M$\Omega$  & SMD 1206 & 105 & \\
+C1 & 100~pF       & SMD 1206 & (hellgrau) & \\
+Q1 & MMBF4393LT1G & SMD SOT-23 & M6G & N Kanal J-FET\\ % FIXME check marking
+Q2 & MMBTA63LT1G  & SMD SOT-23 & 2U & PNP Darlington\\ 
+D1 & BAT54S       & SMD SOT-23 & WV4 & Schottky Diode\\ %  FIXME check marking
+D2 & LED          & 3~mm bedrahtet & -- & Rot oder blau\\
+L1 & 1~mH         & SMD 1210   & (breit) & \\
+L3 & Ferritperle  & SMD 1206   & (schwarz) & \\
+P1 & 5~k$\Omega$  & bedrahtet  & -- & 10 Umdrehungen\\\bottomrule
+\end{tabular}\end{center}
+
+Die Platine ist zur Monage in ein RND 455-00848 Metallgehäuse ausgelegt. Dazu
+werden in den Deckel 4 Löcher für M3 Senkschrauben gebohrt, sowie ein 3~mm
+Loch für die LED und zwei 1~mm Löcher für die beiden Antennendrähte. Der
+Ein/Aus-Schalter und allenfalls ein 9~V DC Anschluss und das Potentiometer
+können dann herausgeführt werden. Für eine steckbare Ausführung kann J1
+mit einer JST XH Buchse bestückt werden.
+
+\section{Justierung}
+Vor der ersten Inbetriebnahme wird P1 ganz zurückgedreht (Gegen-Uhrzeigersinn).
+Das Potentiometer hat keinen Anschlag, aber ein ganz leises Klicken beim
+Drehen verrät, dass das Ende erreicht ist. Anschliessend wird die Schaltung gespiesen
+bzw. eingeschaltet und sollte bei ausgeschalteter LED ca. 2~mA beziehen. P1
+wird zur Justierung langsam in Abwesenheit von HF- und Störsignalen im
+Uhrzeigersinn gedreht, bis die LED ganz leicht zu leuchten beginnt. Dieser
+Arbeitspunkt ist Abhängig von der Eingangsspannung, d.h. beim Entladen der
+Batterie ist allenfalls eine periodische Korrektur notwendig.
+
+\newpage
+
+\section{FIXME Rückseite}
+
+Ideen:
+
+\begin{itemize}
+    \item Fotos, z.B. von der Deluxe Version oder Makroshots der einzelnen Bauteile
+    \item Anwendung, z.B. NFC, HF CW, Handfunkgeräte, Störquellen
+    \item Verbesserungsvorschläge, z.B. Spannungsregler, bessere Diode, Drossel.
+    \item Mehr Infos zur Deluxe-Version (Bohrschablone, Anschluss-Schema usw.)
+\end{itemize}
 \end{document}
 
 
