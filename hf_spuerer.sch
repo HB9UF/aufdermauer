@@ -218,8 +218,6 @@ Wire Wire Line
 Connection ~ 3150 3000
 Wire Wire Line
 	3150 3000 2700 3000
-Text Notes 3200 4650 0    50   ~ 0
-Todo:\n- Evaluate need for polyfuse\n- Put artwork on back side
 $Comp
 L Mechanical:MountingHole_Pad H1
 U 1 1 5D2DB476
