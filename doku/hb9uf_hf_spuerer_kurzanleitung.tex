@@ -95,10 +95,8 @@ bestückte Platine.
 Beim Einsatz eines
 Netzteiles ist zu berücksichtigen, dass das Spiesekabel ebenfalls als Antenne
 wirkt. Ausserdem darf ein solches Netzteil selbst keine Hochfrequenz produzieren,
-da der HF-Spürer diese unweigerlich anzeigen würde. In Abwesenheit von
-hochfrequenten Feldern wird schliesslich P1 aus der Nullstellung heraus (10 
-Umdrehungen im Gegenuhrzeigersinn) im Uhrzeigersinn soweit erhöht, biss die LED
-ganz schwach zu leuchten beginnt. Die Schaltung bezieht im Leerlauf ca. 2~mA.
+da der HF-Spürer diese unweigerlich anzeigen würde.  Die Schaltung bezieht im
+Leerlauf ca. 2~mA.
 
 \section{Stückliste}
 
@@ -122,17 +120,23 @@ werden in den Deckel 4 Löcher für M3 Senkschrauben gebohrt, sowie ein 3~mm
 Loch für die LED und zwei 1~mm Löcher für die beiden Antennendrähte. Der
 Ein/Aus-Schalter und allenfalls ein 9~V DC Anschluss und das Potentiometer
 können dann herausgeführt werden. Für eine steckbare Ausführung kann J1
-mit einer JST XH Buchse bestückt werden.
+mit einer JST XH Buchse bestückt werden. Bei der Montage durch den Deckel
+werden die LED und die beiden Drähte auf der Platinenrückseite (also anders
+als in Abbildung \ref{fig:aufbau} gezeigt) montiert und durch den Deckel
+nach aussen geführt.
 
 \section{Justierung}
 Vor der ersten Inbetriebnahme wird P1 ganz zurückgedreht (Gegen-Uhrzeigersinn).
-Das Potentiometer hat keinen Anschlag, aber ein ganz leises Klicken beim
-Drehen verrät, dass das Ende erreicht ist. Anschliessend wird die Schaltung gespiesen
+Das Potentiometer hat keinen Anschlag, deshalb ist es sinnvoll, zur Sicherheit
+25-mal im Gegen-Uhrzeigersinn zu drehen. Wenn sie einmal erreicht ist, bleibt
+das Potentiometer dann in der Nullposition. Anschliessend wird die Schaltung gespiesen
 bzw. eingeschaltet und sollte bei ausgeschalteter LED ca. 2~mA beziehen. P1
 wird zur Justierung langsam in Abwesenheit von HF- und Störsignalen im
-Uhrzeigersinn gedreht, bis die LED ganz leicht zu leuchten beginnt. Dieser
-Arbeitspunkt ist Abhängig von der Eingangsspannung, d.h. beim Entladen der
-Batterie ist allenfalls eine periodische Korrektur notwendig.
+Uhrzeigersinn gedreht, bis die LED ganz leicht zu leuchten beginnt. Vorsicht:
+Bereits das Berühren der Platine oder Drähte kann HF-Energie einkoppeln!
+Der so gefundene Arbeitspunkt kann durchaus fast am anderen Ende (also nach
+beinahe 25 Umdrehungen) liegen und ist Abhängig von der Eingangsspannung, d.h. beim
+Entladen der Batterie ist allenfalls eine periodische Korrektur notwendig.
 
 \newpage
 
