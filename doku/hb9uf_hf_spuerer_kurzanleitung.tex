@@ -36,9 +36,9 @@ am PC auch das Bestellen der Bauteile, der Platine und nicht zuletzt das
 Löten der Platine. Letzteres konnten die Besucher an besagtem Stand selbst
 ausprobieren und einen Bausatz mit nach Hause nehmen. Die verwendeten
 SMD-Bauteile sind verhältnismässig gross, um in dieser Hinsicht den
-Einstieg zu erleichtern. Das Projekt wurde mit der open source Software
+Einstieg zu erleichtern. Das Projekt wurde mit der Open-Source-Software
 KiCad (Version 5.1.2) erstellt und ist unter einer freien Lizenez
-(CC BY-SA 4.0) auf github verfügbar.
+(CC BY-SA 4.0) online  verfügbar\footnote{\url{https://github.com/HB9UF/aufdermauer}}.
 
 \section{Schaltung}
 Der Hochfrequenzspürer funktioniert im gesamten HF und VHF-Bereich bis
@@ -55,15 +55,16 @@ Anzeige haben wir der Einfachheit halber durch eine LED ersetzt (R1, R2, Q2, D2)
 Wer statt der LED weiterhin ein analoges oder digitales Messgerät nutzen
 möchte, kann Q2, R2 und D2 nicht bestücken und den Spannungsabfall über
 R1 messen. Es ist auch möglich, sogar R1 nicht zu bestücken und stattdessen
-den Drain-Strom von Q1 zu messen. Für beide Fälle ist eine zweipolige JST XH
+den Drain-Strom von Q1 zu messen. Für beide Anwendungsfälle ist eine zweipolige JST XH
 Buchse J2 vorgesehen. Die 1~mH Drossel am Antenneneingang erfährt bei höheren
 Kurzwellenbändern Eigenresonanz. Die Drosselwirkung nimmt dann mit zunehmender
 Frequenz ab. Die in Serie geschaltete Ferritperle L3 vermag daran nicht viel
 zu ändern, zumal ihre Reaktanz verhältnismässig klein ist. Hier besteht deshalb
 optimierungspotential: Es kann mit verschiedenen Konfigurationen experimentiert
 werden, wofür die Bauteile L2 und L4 vorgesehen sind. Diese sind in der
-normalen Ausführung nicht bestückt. Eine Stückliste ist online auf der github %FIXME
-Seite verfügbar.
+normalen Ausführung nicht bestückt. Eine weitere Bestückungsalternative ist
+ein Kurzschluss über L4 und L1 bis L3 leer. Der Spürer reagiert dann sehr
+empfindlich auf niederfrequente Felder.
 
 \begin{figure}
 \includegraphics[width=\textwidth]{schaltung.pdf}
@@ -74,82 +75,70 @@ Seite verfügbar.
 \section{Aufbau}
 Der Aufbau erfolgt gemäss Abbildung \ref{fig:schematic}. Als Antenne dient ein
 Draht von 30 -- 100~cm Länge, welcher an J3 gelötet wird (Beschriftung ``ANT''
-auf Platinenrückseite; Pin im Zentrum verwenden, es kann zum Experimentieren
-auch eine SMA-Buchse eingelötet werden).
-% FIXME: Abbildung
-Ein ebensolanges Gegengewicht ist notwendig, welches mit der Masse
-verbunden wird (Loch mit Massensymbol verwendet). Die Schaltung benötigt eine Spannung von
-9~V und wird über Pins 1 und 2 von J1, z.B. von einer 9~V Blockbatterie
-gespiesen. Pins 3 und 4 dienen dem Ein- und Ausschalten; an sie kann ein Schalter
-angeschlossen werden, oder aber die beiden Pins werden mit einem Jumper einfach
+auf Platinenrückseite; Bohrung im Zentrum verwenden, es kann zum
+Experimentieren auch eine SMA-Buchse eingelötet werden). Ein ebensolanges
+Gegengewicht ist notwendig, welches mit der Masse verbunden wird (Bohrung mit
+Massensymbol unterhalb des Logos). Die Schaltung benötigt eine Spannung von 9~V und wird
+über Pins 1 und 2 von J1, z.B. von einer 9~V Blockbatterie gespiesen. Pins 3
+und 4 dienen dem Ein- und Ausschalten; an sie kann ein Schalter angeschlossen
+werden, oder aber die beiden Pins werden mit einem Jumper einfach
 kurzgeschlossen. Die 3~mm LED kann, je nach Einsatz, auf der Vorder- oder der
 Rückseite eingesetzt werden.  Abbildung \ref{fig:aufbau} zeigt eine fertig
 bestückte Platine.
 
+Beim Einsatz eines Netzteiles ist zu berücksichtigen, dass das Spiesekabel
+ebenfalls als Antenne wirkt. Ausserdem darf ein solches Netzteil selbst keine
+Hochfrequenz produzieren, da der HF-Spürer diese unweigerlich anzeigen würde.
+
 \begin{figure}[H]
-    \begin{center}\includegraphics[width=0.6\textwidth]{foto.png}\end{center}
+    \begin{center}\includegraphics[width=\textwidth]{foto.png}\end{center}
 \caption{Fertig bestückte Platine.}
 \label{fig:aufbau}
 \end{figure}
 
-Beim Einsatz eines
-Netzteiles ist zu berücksichtigen, dass das Spiesekabel ebenfalls als Antenne
-wirkt. Ausserdem darf ein solches Netzteil selbst keine Hochfrequenz produzieren,
-da der HF-Spürer diese unweigerlich anzeigen würde.  Die Schaltung bezieht im
-Leerlauf ca. 2~mA.
-
 \section{Stückliste}
 
 \begin{center}\begin{tabular}{llll}\toprule
-    \textbf{Referenz} & \textbf{Bauilwert} & \textbf{Gehäuse} & \textbf{Beschriftung / Bemerkung}\\\midrule
+    \textbf{Referenz} & \textbf{Bauteilwert} & \textbf{Gehäuse} & \textbf{Beschriftung / Bemerkung}\\\midrule
+Q1 & MMBF4393LT1G & SMD SOT-23 & M6G / N Kanal J-FET\\ % FIXME check marking
+Q2 & MMBTA63LT1G  & SMD SOT-23 & 2U / PNP Darlington\\ 
+D1 & BAT54S       & SMD SOT-23 & WV4 / Schottky Diode\\ %  FIXME check marking
 R1 & 10~k$\Omega$ & SMD 1206 & 103 \\
 R2 & 470~$\Omega$ & SMD 1206 & 471 \\
 R3 & 1~M$\Omega$  & SMD 1206 & 105 \\
 C1 & 100~pF       & SMD 1206 & (hellgrau) \\
-Q1 & MMBF4393LT1G & SMD SOT-23 & M6G / N Kanal J-FET\\ % FIXME check marking
-Q2 & MMBTA63LT1G  & SMD SOT-23 & 2U / PNP Darlington\\ 
-D1 & BAT54S       & SMD SOT-23 & WV4 / Schottky Diode\\ %  FIXME check marking
-D2 & LED (R oder B)    & 3~mm bedrahtet & Kathode ist das kurze Bein\\
 L1 & 1~mH         & SMD 1210   & 102 (breit) \\
-L3 & Ferritperle  & SMD 1206   & (schwarz) \\
+L3 & Ferritperle  & SMD 1206   & (schwarz) \\\midrule
+D2 & LED (R oder B)    & 3~mm bedrahtet & Kathode ist das kurze Bein\\
 P1 & 5~k$\Omega$  & bedrahtet  & 25 Umdrehungen\\\bottomrule
 \end{tabular}\end{center}
 
-Die Platine ist zur Monage in ein RND 455-00848 Metallgehäuse ausgelegt. Dazu
-werden in den Deckel 4 Löcher für M3 Senkschrauben gebohrt, sowie ein 3~mm
-Loch für die LED und zwei 1~mm Löcher für die beiden Antennendrähte. Der
-Ein/Aus-Schalter und allenfalls ein 9~V DC Anschluss und das Potentiometer
-können dann herausgeführt werden. Für eine steckbare Ausführung kann J1
-mit einer JST XH Buchse bestückt werden. Bei der Montage durch den Deckel
-werden die LED und die beiden Drähte auf der Platinenrückseite (also anders
-als in Abbildung \ref{fig:aufbau} gezeigt) montiert und durch den Deckel
-nach aussen geführt.
+Die Bestückungsreihenfolge ist grundsätzlich unkritisch, die obige Tabelle
+dient als Vorschlag. Es bietet sich jedoch an, vor dem Einsetzen der bedrahteten
+Bauteile (D2, P1, die vierpolige Stiftreihe und die beiden Atennendrähte)
+alle SMD-Bauteile zu bestücken. So liegt die Platine für sämtliche SMD Bauteile
+flach auf der Arbeitsfläche auf. Die SMD-Bauteile sind auf einer Referenzkarte
+befestigt und dort auch beschrieben und farblich markiert.
 
 \section{Justierung}
-Vor der ersten Inbetriebnahme wird P1 ganz zurückgedreht (Gegen-Uhrzeigersinn).
-Das Potentiometer hat keinen Anschlag, deshalb ist es sinnvoll, zur Sicherheit
-25-mal im Gegen-Uhrzeigersinn zu drehen. Wenn sie einmal erreicht ist, bleibt
-das Potentiometer dann in der Nullposition. Anschliessend wird die Schaltung gespiesen
-bzw. eingeschaltet und sollte bei ausgeschalteter LED ca. 2~mA beziehen. P1
-wird zur Justierung langsam in Abwesenheit von HF- und Störsignalen im
+P1 wird wird zur Justierung langsam in Abwesenheit von HF- und Störsignalen im
 Uhrzeigersinn gedreht, bis die LED ganz leicht zu leuchten beginnt. Vorsicht:
 Bereits das Berühren der Platine oder Drähte kann HF-Energie einkoppeln!
 Der so gefundene Arbeitspunkt kann durchaus fast am anderen Ende (also nach
-beinahe 25 Umdrehungen) liegen und ist Abhängig von der Eingangsspannung, d.h. beim
-Entladen der Batterie ist allenfalls eine periodische Korrektur notwendig.
+beinahe 25 Umdrehungen) liegen und ist Abhängig von der Eingangsspannung. Deshalb
+ist beim Entladen der Batterie eine periodische Korrektur notwendig. Das
+Nachrüsten mit einem LDO schafft hierfür Abhilfe.
 
-\newpage
-
-\section{FIXME Rückseite}
-
-Ideen:
-
-\begin{itemize}
-    \item Fotos, z.B. von der Deluxe Version oder Makroshots der einzelnen Bauteile
-    \item Anwendung, z.B. NFC, HF CW, Handfunkgeräte, Störquellen
-    \item Verbesserungsvorschläge, z.B. Spannungsregler, bessere Diode, Drossel.
-    \item Mehr Infos zur Deluxe-Version (Bohrschablone, Anschluss-Schema usw.)
-\end{itemize}
+\section{Montage in Gehäuse}
+Die Platine ist zur Monage in ein RND 455-00848 Metallgehäuse ausgelegt. Dazu
+werden in den Deckel 4 Bohrungen für M3 Senkschrauben gebohrt, sowie eine 3~mm
+Bohrung für die LED und zwei 1~mm Bohrungen für die beiden Antennendrähte. Der
+Ein/Aus-Schalter und allenfalls ein 9~V DC Anschluss und das Potentiometer
+können dann herausgeführt werden. Für eine steckbare Ausführung kann J1
+mit einer JST XH Buchse bestückt werden. Bei der Montage durch den Deckel
+werden die LED und die beiden Drähte auf der Platinenrückseite (also genau
+anders als in Abbildung \ref{fig:aufbau} gezeigt!) montiert und durch den
+Deckel nach aussen geführt.
 \end{document}
 
 
