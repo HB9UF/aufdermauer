@@ -379,7 +379,7 @@ $EndComp
 Wire Wire Line
 	3500 2650 3500 2700
 Text Notes 5850 3550 0    50   ~ 0
-Beste Drossel-Lösung eruieren:\n- L1 (Drossel) & L3 (Ferrit) in Serie\n- L2 als Drossel oder Ferrit\n- L4 wie L2 für Gleichrichter
+Bestückungsalternativen:\n- L1 (Drossel) & L3 (Ferrit) in Serie\n- L2 als Drossel oder Ferritperle\n- L1-L3 leer, L4 kurzschliessen
 Wire Wire Line
 	3150 3650 3150 3900
 Wire Wire Line
