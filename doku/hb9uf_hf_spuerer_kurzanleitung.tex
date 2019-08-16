@@ -41,8 +41,8 @@ KiCad (Version 5.1.2) erstellt und ist unter einer freien Lizenez
 (CC BY-SA 4.0) online  verfügbar\footnote{\url{https://github.com/HB9UF/aufdermauer}}.
 
 \section{Schaltung}
-Der Hochfrequenzspürer funktioniert im gesamten HF und VHF-Bereich bis
-hin in den UHF-Bereich. Die Schaltung ist inspiriert von einem alten
+Der Hochfrequenzspürer arbeitet im gesamten HF und VHF-Bereich bis
+in den UHF-Bereich. Die Schaltung ist inspiriert von einem 
 Artikel, der 1993 in der CQ DL erschienen ist\footnote{Einfacher
 ``Hochfrequenzschnüffler'' von Steve Ortmayer, G4RAW. cq-DL 1/93.}. In der
 ursprünglichen Schaltung kommt für den Gleichrichter eine OA90 Germanium-Diode
@@ -54,16 +54,16 @@ Schaltung ist für den Einsatz mit einem Zeiger-Instrument konzipiert. Diese
 Anzeige haben wir der Einfachheit halber durch eine LED ersetzt (R1, R2, Q2, D2).
 Wer statt der LED weiterhin ein analoges oder digitales Messgerät nutzen
 möchte, kann Q2, R2 und D2 nicht bestücken und den Spannungsabfall über
-R1 messen. Es ist auch möglich, sogar R1 nicht zu bestücken und stattdessen
+R1 messen. Es ist auch möglich, R1 nicht zu bestücken und stattdessen
 den Drain-Strom von Q1 zu messen. Für beide Anwendungsfälle ist eine zweipolige JST XH
 Buchse J2 vorgesehen. Die 1~mH Drossel am Antenneneingang erfährt bei höheren
 Kurzwellenbändern Eigenresonanz. Die Drosselwirkung nimmt dann mit zunehmender
 Frequenz ab. Die in Serie geschaltete Ferritperle L3 vermag daran nicht viel
 zu ändern, zumal ihre Reaktanz verhältnismässig klein ist. Hier besteht deshalb
-optimierungspotential: Es kann mit verschiedenen Konfigurationen experimentiert
+Optimierungspotential: Es kann mit verschiedenen Konfigurationen experimentiert
 werden, wofür die Bauteile L2 und L4 vorgesehen sind. Diese sind in der
 normalen Ausführung nicht bestückt. Eine weitere Bestückungsalternative ist
-ein Kurzschluss über L4 und L1 bis L3 leer. Der Spürer reagiert dann sehr
+ein Kurzschluss über L4 und L1 bis L3 nicht einzusetzen. Der Spürer reagiert dann sehr
 empfindlich auf niederfrequente Felder.
 
 \begin{figure}
