@@ -1,0 +1,24 @@
+For now, this project is in German only!
+
+Dies ist das git repository für den HB9UF Hochfrequenz-Spürer -- ein Gerät,
+welches hochfrequente Felder von Sendern oder Störungen anzeigt.  Es handelt
+sich dabei um ein Bauprojekt, das anlässlich des Hamfestes 2019 in Zug
+vorgestellt worden ist. Ziel war es, interessierten Besuchern am Stand von
+HB9UF aufzuzeigen, wie Bauprojekte mit modernen Methoden umgesetzt werden
+können. Hierzu gehört neben dem Entwurf der Schaltung und dem Platinen-Layout
+am PC auch das Bestellen der Bauteile, der Platine und nicht zuletzt das Löten
+der Platine. Letzteres konnten die Besucher an besagtem Stand selbst
+ausprobieren und einen Bausatz mit nach Hause nehmen. Die verwendeten
+SMD-Bauteile sind verhältnismässig gross, um in dieser Hinsicht den Einstieg zu
+erleichtern. Das Projekt wurde mit der Open-Source-Software KiCad (Version
+5.1.2) erstellt und ist unter einer freien Lizenez (CC BY-SA 4.0) hier
+verfügbar.
+
+In Zug wurde mit rev 1.1 gearbeitet, der dazugehörig commit hat einen
+entsprechenden Tag. Im Unterverzeichnis release/ sind Schaltplan,
+Projektdokumentation sowie 2D und 3D Bilder der Platine und Gerber files zu
+finden. Der Inhalt dieses Verzeichnisses wird nur bei einem neuen Release
+aktualisiert.
+
+
+
