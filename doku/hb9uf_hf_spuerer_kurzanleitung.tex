@@ -118,7 +118,10 @@ dient als Vorschlag. Es bietet sich jedoch an, vor dem Einsetzen der bedrahteten
 Bauteile (D2, P1, die vierpolige Stiftreihe und die beiden Atennendrähte)
 alle SMD-Bauteile zu bestücken. So liegt die Platine für sämtliche SMD Bauteile
 flach auf der Arbeitsfläche auf. Die SMD-Bauteile sind auf einer Referenzkarte
-befestigt und dort auch beschrieben und farblich markiert.
+befestigt und dort auch beschrieben und farblich markiert. Der Batterieclip
+wird an die Pins ``+'' und ``-'' der vierpoligen Stiftenreihe gelötet. Die
+erwendung von Schrumpfschlauch zur mechanischen Stabilisierung dieses
+Anschlusses dringend empfohlen. Polarität: (``+'' ist rot;``-'' ist schwarz).
 
 \section{Justierung}
 P1 wird wird zur Justierung langsam in Abwesenheit von HF- und Störsignalen im
@@ -127,13 +130,16 @@ Bereits das Berühren der Platine oder Drähte kann HF-Energie einkoppeln!
 Der so gefundene Arbeitspunkt kann durchaus fast am anderen Ende (also nach
 beinahe 25 Umdrehungen) liegen und ist Abhängig von der Eingangsspannung. Deshalb
 ist beim Entladen der Batterie eine periodische Korrektur notwendig. Das
-Nachrüsten mit einem LDO schafft hierfür Abhilfe.
+Nachrüsten mit einem LDO (Spannungsregler) schafft hierfür Abhilfe.
 
 \section{Montage in Gehäuse}
 Die Platine ist zur Monage in ein RND 455-00848 Metallgehäuse ausgelegt. Dazu
 werden in den Deckel 4 Bohrungen für M3 Senkschrauben gebohrt, sowie eine 3~mm
-Bohrung für die LED und zwei 1~mm Bohrungen für die beiden Antennendrähte. Der
-Ein/Aus-Schalter und allenfalls ein 9~V DC Anschluss und das Potentiometer
+Bohrung für die LED und zwei 1~mm Bohrungen für die beiden Antennendrähte. Jede
+dieser Schrauben wird mit einer M3 Mutter in den Deckel fixiert. Eine weitere
+M3 Mutter presst dann die Platine gegen diese erste Mutter, so dass für die
+vier Schrauben insgesamt acht Muttern benötigt werden.
+Der Ein/Aus-Schalter und allenfalls ein 9~V DC Anschluss und das Potentiometer
 können dann herausgeführt werden. Für eine steckbare Ausführung kann J1
 mit einer JST XH Buchse bestückt werden. Bei der Montage durch den Deckel
 werden die LED und die beiden Drähte auf der Platinenrückseite (also genau
