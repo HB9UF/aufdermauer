@@ -1,0 +1,21 @@
+\documentclass[14pt]{minimal}
+\usepackage[papersize={85mm,70mm},hmargin=0mm,vmargin=0mm]{geometry}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage[T1]{fontenc}
+\renewcommand*\familydefault{\sfdefault}
+\definecolor{HB9UF}{HTML}{2a3c9a}
+\usepackage{qrcode}
+\begin{document}
+\begin{tikzpicture}
+  \node at (0,0) { \includegraphics[height=65mm]{logo.pdf} };
+  \node at ($(0,0)+(0mm,28mm)$) {  \bfseries \textcolor{HB9UF}{UHF-Gruppe der USKA} };
+  \node[anchor=west] at ($(0,0)+(-20mm,-15mm)$) {  \bfseries \textcolor{HB9UF}{HB9UF} };
+  \node[anchor=west] at ($(0,0)+(-20mm,-20mm)$) {  \bfseries \textcolor{HB9UF}{HB9UHF} };
+  \node at (3.5,1.5) {\qrcode{https://github.com/HB9UF/aufdermauer/releases/download/rev1.1/hb9uf_hf_spuerer_kurzanleitung_rev_1_1.pdf}};
+  \node at (3.5,0.2) {Doku};
+  \node at (3.5,-1.5) {\qrcode{https://www.youtube.com/watch?v=iNs1wFNOI40}};
+  \node at (3.5,-2.8) {Video};
+\end{tikzpicture}
+\end{document}
